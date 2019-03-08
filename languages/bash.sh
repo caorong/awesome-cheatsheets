@@ -488,6 +488,15 @@ for name [in list]; do
     statements
 done
 
+for n in "a b c"; do
+    echo n
+done
+
+array=("a" "b" "c")
+for i in "${array[@]}"; do
+    echo $i
+done
+
 # for 列举某目录下面的所有文件
 for f in /home/*; do 
     echo $f
