@@ -292,6 +292,7 @@ ${#varname}               # 返回字符串长度
 @(patternlist)            # 单词匹配
 !(patternlist)            # 不匹配
 
+str="$str1 $str2"         # 合并2个字符串
 array=($text)             # 按空格分隔 text 成数组，并赋值给变量
 IFS="/" array=($text)     # 按斜杆分隔字符串 text 成数组，并赋值给变量
 text="${array[*]}"        # 用空格链接数组并赋值给变量
