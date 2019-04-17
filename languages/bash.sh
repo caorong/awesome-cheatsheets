@@ -181,6 +181,7 @@ trap - sig1 sig2          # 恢复默认信号处理行为
 
 nohup {command}           # 长期运行某程序，在你退出登陆都保持它运行
 nohup {command} &         # 在后台长期运行某程序
+nohup {command} > my.log 2>&1 # 在后台长期运行某程序，并将日志输出到指定文件
 disown {PID|JID}          # 将进程从后台任务列表（jobs）移除
 
 wait                      # 等待所有后台进程任务结束
@@ -481,7 +482,8 @@ while [ $i -le 10 ]; do
 done
 
 # for 循环：上面的 while 语句等价
-for i in {1..10}; do
+for i in {01..10}; do
+    # 01 02 03 04 ..
     echo $i
 done
 
